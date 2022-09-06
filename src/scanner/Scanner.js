@@ -64,10 +64,11 @@ const Scanner = ({ onDetected }) => {
   }, []);
 
   return (
-    // If you do not specify a target,
-    // QuaggaJS would look for an element that matches
-    // the CSS selector #interactive.viewport
-    <div id="interactive" className="viewport" />
+    <div
+      id="interactive"
+      className="viewport"
+      style={{ border: "1px solid black", width: "700px", height: "700px" }}
+    />
   );
 };
 
