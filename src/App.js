@@ -21,22 +21,20 @@ function App() {
     if (result !== null) {
       setResultList([...resultList, result]);
     }
-  }, [result]);
+  }, [result, resultList]);
 
   return (
     <div className="App">
       <p>결과 목록:</p>
-      <select>
+      <div>
         {resultList.map((item) => {
           return (
-            <option key={item}>
-              <label>
-                <input type="checkBox" /> {item}
-              </label>
-            </option>
+            <label key={item}>
+              <input type="radio" name="barcode" /> {item}
+            </label>
           );
         })}
-      </select>
+      </div>
       <p>
         결과: <span>{result}</span>
       </p>
